@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore livros, descubra novas histórias e organize suas próximas leituras.">
+  <title>EntrePáginas — Biblioteca Virtual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stilo.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="EntrePáginas, início"><span class="marca-icone">e<span>p</span></span><span>Entre<span class="marca-destaque">Páginas</span></span></a>
+    <nav class="nav-principal" aria-label="Navegação principal">
+      <a class="nav-link ativo" href="#inicio">Início</a>
+      <a class="nav-link" href="#catalogo">Explorar livros</a>
+      <a class="nav-link" href="#categorias">Categorias</a>
+    </nav>
+    <a class="perfil" href="#minha-lista"><span class="perfil-icone">♡</span><span>Minha lista</span></a>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-conteudo">
+        <span class="sobretitulo"><span class="ponto"></span> SUA PRÓXIMA HISTÓRIA COMEÇA AQUI</span>
+        <h1>Um mundo inteiro<br>entre <em>páginas.</em></h1>
+        <p>Encontre seu próximo livro favorito. Explore histórias, descubra novos autores e deixe a imaginação te levar.</p>
+        <a class="botao-principal" href="#catalogo">Explorar biblioteca <span>↗</span></a>
+        <div class="hero-nota"><div class="mini-avatars"><span>✦</span><span>✧</span><span>❋</span></div><span><strong>Milhares de histórias</strong><br>esperando por você</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Livros e uma xícara de café">
+        <div class="decor decor-um">✳</div><div class="decor decor-dois">✦</div>
+        <div class="livro livro-fundo"><span>O JARDIM<br>SECRETO</span><small>F. H. BURNETT</small></div>
+        <div class="livro livro-meio"><span>A ARTE DE<br>VIVER DEVAGAR</span><small>PEQUENAS REFLEXÕES</small></div>
+        <div class="livro livro-frente"><span>O PEQUENO<br>PRÍNCIPE</span><small>ANTOINE DE SAINT-EXUPÉRY</small><i>✧</i></div>
+        <div class="selo">LEIA<br>· SONHE ·<br>DESCUBRA</div>
+        <div class="sombra-livros"></div>
+      </div>
+    </section>
+
+    <section class="busca-area" aria-label="Pesquisar livros">
+      <div class="busca-texto"><span class="busca-icone">⌕</span><input id="pesquisa" type="search" placeholder="Busque por título, autor ou gênero..." aria-label="Buscar livros"><button id="limpar-busca" class="limpar-busca" type="button" aria-label="Limpar pesquisa">×</button></div>
+      <span class="busca-dica">Sua próxima leitura está a poucos cliques.</span>
+    </section>
+
+    <section class="secao categorias" id="categorias">
+      <div class="cabecalho-secao"><div><span class="etiqueta">EXPLORE POR INTERESSE</span><h2>O que você quer ler hoje?</h2></div><p>Todo tipo de leitor tem seu lugar aqui.</p></div>
+      <div class="categorias-lista" role="group" aria-label="Filtrar por categoria">
+        <button class="categoria selecionada" data-categoria="Todos" type="button"><span>✺</span>Todos os livros</button>
+        <button class="categoria" data-categoria="Romance" type="button"><span>♡</span>Romance</button>
+        <button class="categoria" data-categoria="Fantasia" type="button"><span>✧</span>Fantasia</button>
+        <button class="categoria" data-categoria="Suspense" type="button"><span>☾</span>Suspense</button>
+        <button class="categoria" data-categoria="Desenvolvimento" type="button"><span>❋</span>Desenvolvimento</button>
+        <button class="categoria" data-categoria="Clássicos" type="button"><span>▤</span>Clássicos</button>
+      </div>
+    </section>
+
+    <section class="secao catalogo" id="catalogo">
+      <div class="cabecalho-secao catalogo-cabecalho"><div><span class="etiqueta">ESCOLHAS PARA VOCÊ</span><h2>Livros em destaque <span class="estrela-titulo">✳</span></h2></div><span class="contador" id="contador">06 livros</span></div>
+      <div class="grade-livros" id="grade-livros">
+        <article class="livro-card" data-categoria="Fantasia" data-titulo="O Hobbit" data-autor="J. R. R. Tolkien"><button class="favorito" aria-label="Adicionar O Hobbit à minha lista" type="button">♡</button><div class="capa capa-hobbit"><span class="capa-selo">UMA JORNADA</span><strong>O<br>HOBBIT</strong><small>J. R. R. TOLKIEN</small><span class="capa-ilustracao">⌁</span></div><div class="livro-info"><span class="genero">FANTASIA</span><h3>O Hobbit</h3><p>J. R. R. Tolkien</p><div class="livro-rodape"><span>★ 4,9 <i>· clássico moderno</i></span><button class="botao-detalhes" type="button">Ver livro ↗</button></div></div></article>
+        <article class="livro-card" data-categoria="Romance" data-titulo="Orgulho e Preconceito" data-autor="Jane Austen"><button class="favorito" aria-label="Adicionar Orgulho e Preconceito à minha lista" type="button">♡</button><div class="capa capa-orgulho"><span class="capa-ornamento">❦</span><strong>ORGULHO<br><i>&</i><br>PRECONCEITO</strong><small>JANE AUSTEN</small></div><div class="livro-info"><span class="genero">ROMANCE</span><h3>Orgulho e Preconceito</h3><p>Jane Austen</p><div class="livro-rodape"><span>★ 4,8 <i>· romance clássico</i></span><button class="botao-detalhes" type="button">Ver livro ↗</button></div></div></article>
+        <article class="livro-card" data-categoria="Suspense" data-titulo="A Paciente Silenciosa" data-autor="Alex Michaelides"><button class="favorito" aria-label="Adicionar A Paciente Silenciosa à minha lista" type="button">♡</button><div class="capa capa-paciente"><span class="capa-linha"></span><strong>A PACIENTE<br>SILENCIOSA</strong><small>ALEX MICHAELIDES</small><span class="capa-olho">◉</span></div><div class="livro-info"><span class="genero">SUSPENSE</span><h3>A Paciente Silenciosa</h3><p>Alex Michaelides</p><div class="livro-rodape"><span>★ 4,7 <i>· mistério psicológico</i></span><button class="botao-detalhes" type="button">Ver livro ↗</button></div></div></article>
+        <article class="livro-card" data-categoria="Desenvolvimento" data-titulo="Hábitos Atômicos" data-autor="James Clear"><button class="favorito" aria-label="Adicionar Hábitos Atômicos à minha lista" type="button">♡</button><div class="capa capa-habitos"><span class="capa-sol">☼</span><strong>HÁBITOS<br>ATÔMICOS</strong><small>JAMES CLEAR</small><span class="capa-frase">PEQUENAS MUDANÇAS,<br>RESULTADOS EXTRAORDINÁRIOS</span></div><div class="livro-info"><span class="genero">DESENVOLVIMENTO</span><h3>Hábitos Atômicos</h3><p>James Clear</p><div class="livro-rodape"><span>★ 4,9 <i>· crescimento pessoal</i></span><button class="botao-detalhes" type="button">Ver livro ↗</button></div></div></article>
+        <article class="livro-card" data-categoria="Clássicos" data-titulo="O Pequeno Príncipe" data-autor="Antoine de Saint-Exupéry"><button class="favorito" aria-label="Adicionar O Pequeno Príncipe à minha lista" type="button">♡</button><div class="capa capa-principe"><span class="capa-estrelas">✦　·　✧</span><strong>O PEQUENO<br>PRÍNCIPE</strong><small>ANTOINE DE SAINT-EXUPÉRY</small><span class="capa-planeta">◯</span></div><div class="livro-info"><span class="genero">CLÁSSICOS</span><h3>O Pequeno Príncipe</h3><p>Antoine de Saint-Exupéry</p><div class="livro-rodape"><span>★ 5,0 <i>· uma história atemporal</i></span><button class="botao-detalhes" type="button">Ver livro ↗</button></div></div></article>
+        <article class="livro-card" data-categoria="Fantasia" data-titulo="A Vida Invisível de Addie LaRue" data-autor="V. E. Schwab"><button class="favorito" aria-label="Adicionar A Vida Invisível de Addie LaRue à minha lista" type="button">♡</button><div class="capa capa-addie"><span class="capa-lua">☾</span><strong>A VIDA<br>INVISÍVEL DE<br>ADDIE LARUE</strong><small>V. E. SCHWAB</small><span class="capa-folhas">✧ ❋ ✧</span></div><div class="livro-info"><span class="genero">FANTASIA</span><h3>A Vida Invisível de Addie LaRue</h3><p>V. E. Schwab</p><div class="livro-rodape"><span>★ 4,8 <i>· fantasia e memória</i></span><button class="botao-detalhes" type="button">Ver livro ↗</button></div></div></article>
+      </div>
+      <p class="sem-resultados" id="sem-resultados" hidden>Nenhum livro encontrado. Tente outro título ou categoria.</p>
+    </section>
+
+    <section class="convite" id="minha-lista"><div class="convite-icone">✉</div><div><span class="etiqueta">UM CAPÍTULO DE CADA VEZ</span><h2>Boas histórias merecem ser compartilhadas.</h2><p>Salve seus favoritos e monte uma lista para sua próxima aventura literária.</p></div><a href="#catalogo" class="botao-secundario">Encontrar meu próximo livro ↗</a></section>
+  </main>
+  <footer><a class="marca marca-rodape" href="#inicio"><span class="marca-icone">e<span>p</span></span><span>Entre<span class="marca-destaque">Páginas</span></span></a><span>Um cantinho para quem ama ler.</span><span>Feito com ♥ e imaginação</span></footer>
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+  <script src="interativo.js"></script>
+</body>
+</html>
